@@ -16,3 +16,19 @@ var salaries = {
 };
 
 //... ваш код выведет 650
+
+function getSum(obj){
+	var sum = 0;
+	for (var key in obj){
+		sum += obj[key];
+	}
+	return sum;
+}
+
+console.log("Не пустой объект: " + getSum(salaries));
+
+delete salaries["Вася"];
+delete salaries["Петя"];
+delete salaries["Даша"];
+
+console.log("Пустой объект: " + getSum(salaries));
